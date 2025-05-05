@@ -50,6 +50,7 @@ export const TicketList = () => {
           </div>
           <article className="tickets">
             {filteredTickets.map((ticketObj) => {
+                console.log("ticketObj: ", ticketObj)
               return <Ticket ticket={ticketObj} key={ticketObj.id}/>
             })}
           </article>

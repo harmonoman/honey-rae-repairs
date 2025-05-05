@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAllEmployees } from "../../services/employeeService";
 
 export const Ticket = ({ ticket }) => {
+    console.log("ticket: ", ticket)
     const [employees, setEmployees] = useState([]);
     const [assignedEmployee, setAssignedEmployee] = useState({});
 
@@ -18,7 +19,7 @@ export const Ticket = ({ ticket }) => {
     }, [employees, ticket]);
 
     return (
-        <section className="ticket">1
+        <section className="ticket">
           <header className="ticket-info">#{ticket.id}</header>
           <div>{ticket.description}</div>
           <footer>
