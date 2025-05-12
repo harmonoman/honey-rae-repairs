@@ -22,11 +22,23 @@ export const EmployeeDetails = () => {
     },[employeeId])
 
     return (
-        <div  >
-            <div>Employee name: {userInfo?.fullName}</div>
-            <div>Specialty: {employeeInfo?.specialty || "N/A"}</div>
-            <div>Rate: {employeeInfo?.rate ? `$${employeeInfo.rate}/hr` : "N/A"}</div>
-            <div>Number of Tickets: {employeeInfo?.employeeTickets.length || 0}</div>
+        <div className="employees">
+            <div className="employee" >
+                <div className="employee-row">
+                    <div className="employee-name">{userInfo?.fullName}</div>
+                </div>          
+                <div className="employee-row">
+                    <div className="employee-info">Specialty:</div>
+                    <div>{employeeInfo?.specialty || "N/A"}</div>
+                </div>
+
+                <div className="employee-row">
+                    <div className="employee-info">Rate:</div>
+                    <div>{employeeInfo?.rate ? `$${employeeInfo.rate}/hr` : "N/A"}</div>
+                </div>
+                
+                <div><em>Currently working on {employeeInfo?.employeeTickets.length || 0} tickets</em></div>
+                </div>
         </div>
     )
 }
