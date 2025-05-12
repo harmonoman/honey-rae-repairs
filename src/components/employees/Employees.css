@@ -4,14 +4,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 3rem;
-  }
+}
 
-  .employees > * {
+.employees > * {
     flex-basis: 31%;
     margin: 0.5rem;
+}
+
+section.employee {
+    margin: 3rem;
   }
+
 .employee {
-   background-color: var(--white);
+    background-color: var(--white);
     border: 1px solid var(--outline);
     border-radius: 0.5rem;
     padding: 1rem;
@@ -22,12 +27,12 @@
     font-family: "Roboto", sans-serif;
 }
 
-.employee-name {
-    color: var(--primary);
-    font-family: "Roboto", sans-serif;
+.employee-header {
+    font-size: Larger;
     font-weight: 700;
-
-}
+    line-height: 3rem;
+    color: var(--primary);
+  }
 .employee-row {
     display: flex;
     gap: 0.5rem;
