@@ -10,3 +10,27 @@
     flex-basis: 31%;
     margin: 0.5rem;
   }
+.employee {
+   background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.employee-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+}
+
+.employee-name {
+    color: var(--primary);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+
+}
+.employee-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+  }

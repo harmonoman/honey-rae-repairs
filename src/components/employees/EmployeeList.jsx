@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getStaffUsers } from "../../services/userService";
 import { User } from "../users/User";
 import { Link } from "react-router-dom";
+import "./Employees.css"
 
 export const EmployeeList = () => {
     const [employees, setEmployees] = useState([]);
