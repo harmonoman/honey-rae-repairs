@@ -3,6 +3,17 @@ export const getAllEmployees = () => {
 }
 
 
-export const getEmployeeDetails = (id) => {
-    return fetch(`http://localhost:8088/employees?userId=${id}&_expand=user&_embed=employeeTickets`).then((res) => res.json());
+export const getEmployeeByUserId = (userId) => {
+    return fetch(`http://localhost:8088/employees?_expand=user&_embed=employeeTickets&userId=${userId}`).then((res) => res.json());
+
+}
+
+export const updateEmployee = (employee) => {
+    return fetch(`http://localhost:8088/employees/${employee.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-type" : "application/json" 
+        },
+        body: JSON.stringify(employee),
+    })
 }
