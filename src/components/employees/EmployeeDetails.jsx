@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { getEmployeeDetails } from "../../services/employeeService";
+import { getEmployeeByUserId } from "../../services/employeeService";
 import { getStaffUsers } from "../../services/userService.jsx";
 
 export const EmployeeDetails = () => {
@@ -14,7 +14,7 @@ export const EmployeeDetails = () => {
             setUserInfo(foundUser);
         }) 
 
-        getEmployeeDetails(employeeId).then((employeeArray) => {
+        getEmployeeByUserId(employeeId).then((employeeArray) => {
             if (employeeArray.length > 0) {
                 setEmployeeInfo(employeeArray[0]);
             }
